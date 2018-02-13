@@ -1,0 +1,32 @@
+git 사용법 간단하게 살펴 보기!
+
+<mother> - <sub_mother1> - <al1.py>
+			   <al2.py>
+	 - <sub_mother2>
+
+1. git 회원가입
+
+2. git-hub에서 repository 생성
+
+3. git-hub에 올리고 싶은 파일을 지정한다. <mother>
+
+4. cmd 창을 실행시킨 후, git-hub에 올리고 싶은 파일의 directory를 설정한다. cd <mother>
+
+## 다음부터는 명령어로 설명 ##
+
+git init # git을 추가하는 명령어
+
+git add . # git에 올릴 <mother> file 안의 모든 파일 혹은 수정된 파일들이 추가된다.
+
+git status # add 된 것들을 확인할 수 있다.
+
+git commit <file_name> -m "commit하고자하는 내용" # git-hub에 올라간 파일의 부가설명을 적어놓을 수 있다.
+
+# git commit <sub_mother1>/ -m "내용" 이면, <a1.py> / <a2.py> 파일 두 곳의 commit도 <sub_mother1> commit을 따른다.
+# git commit <sub_mother1>/<a1.py> -m "내용1" / git commit <sub_mother1>/<a2.py> -m "내용2" 를 순서대로 하면, <sub_mother1>의
+# commit 은 <a2.py>의 commit을 따른다.
+
+git remote add origin https://github.com/Ryuhos/hello_github # push할 대상 정하기
+
+git push -u origin master #master branch의 내용을 origin에 올리기 
+
